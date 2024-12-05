@@ -1,0 +1,45 @@
+/* cursor-pointer hover:text-gray-700 relative after:absolute after:bottom-0 after:left-0 after:bg-gray-700 
+            after:h-0.5 after:w-0 hover:after:w-full after:transition-all after:ease-in-out after:duration-300; */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.ct-top-menu-item {
+    cursor: pointer;
+    position: relative;
+}
+
+.ct-top-menu-item:hover {
+    color: darkslategray;
+}
+
+.ct-top-menu-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: darkslategray;
+    height: 2px;
+    width: 0;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.ct-top-menu-item:hover::after {
+    width: 100%;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+div h1, div h2, div p {
+    margin-bottom: 20px;
+}
