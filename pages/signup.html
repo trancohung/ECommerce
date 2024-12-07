@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="index.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" />
 
@@ -39,13 +39,13 @@
                             <a href="#" class="">About</a>
                         </li>
                         <li class="ct-top-menu-item">
-                            <a href="#" class="">Sign Up</a>
+                            <a href="../pages/signup.html" class="">Sign Up</a>
                         </li>
                     </ul>
                     <div class="basis-2/6 flex items-center justify-center">
                         <form class="w-full">
                             <input class="w-[250px] p-4 bg-[#F5F5F5] rounded text-xs outline-none" type="text"
-                                placeholder="What are you looking for?"/>
+                                placeholder="What are you looking for?" />
                             <button type="sumit"><i class="ml-[-50px] fa-solid fa-magnifying-glass"></i></button>
                         </form>
                         <div class="flex gap-4">
@@ -57,23 +57,37 @@
             </header>
             <div class="my-10 h-full flex justify-between">
                 <div class="basis-2/3">
-                    <img src="./Assets/Side Image.png"/>
+                    <img src="./Assets/Side Image.png" />
                 </div>
                 <div class="basis-1/3 pt-20 mr-20">
-                    <form action="" method="" class="">
-                        <div class="mb-8">
-                            <h1 class="text-4xl font-semibold pb-4">Log in to Exclusive</h1>
+                    <form action="" method="" class="" id="formRegister">
+                        <div class="mb-4">
+                            <h1 class="text-4xl font-semibold pb-4">Create an account</h1>
                             <h2 class="">Enter your details below</h2>
                         </div>
-                        <div class="border-b border-1 border-black my-4 font-light">
-                            <input type="text" placeholder="Email or Phone Number" class="outline-none" required />
+                        <div class="form-group border-b border-1 border-black my-8 font-light">
+                            <input id="username" type="text" placeholder="Name" class="outline-none" required />
+                            <span class="form-message"></span>
                         </div>
-                        <div class="border-b border-1 border-black my-8 font-light">
-                            <input type="password" placeholder="Password" class="outline-none" required/>
+                        <div class="form-group border-1 border-black my-8 font-light">
+                            <input id="email" type="text" placeholder="Email or Phone Number" class="outline-none" required />
+                            <span class="form-message"></span>
                         </div>
-                        <div class="flex justify-between items-center">
-                            <button type="submit" class="bg-[#DB4444] rounded px-10 py-4 text-white">Log In</button>
-                            <a class="text-[#DB4444]">Forget Password?</a>
+                        <div class="form-group border-b border-1 border-black my-8 font-light">
+                            <input id="password" type="password" placeholder="Password" class="outline-none" required />
+                            <span class="form-message"></span>
+                        </div>
+                        <div>
+                            <button type="submit" class="bg-[#DB4444] rounded w-full py-4 text-white">Create
+                                Account</button>
+                        </div>
+                        <div class="flex items-center justify-center gap-4 mt-4 border border-solid border-slate-300 rounded">
+                            <img src="./Assets/Icon-Google.png" class="w-[16px]" />
+                            <button type="submit" class="py-4">Sign up with Google</button>
+                        </div>
+                        <div class="flex justify-center gap-4 pt-8">
+                            <p>Already have account?</p>
+                            <a class="font-semibold" href="../pages/login.html">Log in</a>
                         </div>
                     </form>
                 </div>
@@ -107,7 +121,8 @@
             </div>
         </div>
     </div>
-    <script src="index.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/signup.js"></script>
 </body>
 
 </html>
