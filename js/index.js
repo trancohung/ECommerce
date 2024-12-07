@@ -16,3 +16,13 @@ menuItems.forEach(item => {
     template.querySelector("a").textContent = item;
     container.appendChild(template);
 })
+
+// lấy dữ liệu trên local
+const userLogin = JSON.parse(localStorage.getItem("userLogin"));
+const userLoginElement = document.getElementById("userLogin");
+
+if (userLogin) {
+  userLoginElement.innerHTML = userLogin.username;
+} else {
+  userLoginElement.innerHTML = "";
+}
