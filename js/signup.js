@@ -23,7 +23,7 @@ formRegister.addEventListener("submit", (e) => {
         localStorage.setItem("users", JSON.stringify(userLocal));
     
         // chuyển hướng về trang đăng nhập
-        window.location.href = "../login.html";
+        window.location.href = "./login.html";
     
     }
     
