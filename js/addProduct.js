@@ -31,13 +31,13 @@ function renderProducts() {
         productDiv.innerHTML = `
             <img src="${product.image}" alt="${product.name}" class="w-full h-60 object-cover mb-4 rounded">
             <h2 class="text-lg font-bold">${product.name}</h2>
-            <p class="text-gray-600">${product.price} VND</p>
-            <p class="text-gray-600">${product.finalPrice} VND</p>
-            <div class="flex gap-4">
-                <button class="bg-[#DB4444] rounded w-full p-2 mt-2 text-white">
-                    <a href="#">Xem chi tiết sản phẩm</a>
+            <p class="text-gray-600">${product.price}.000 VND</p>
+            <p class="text-gray-600">${product.finalPrice}.000 VND</p>
+            <div class="flex gap-2">
+                <button class="bg-[#DB4444] rounded w-2/3 p-2 mt-2 text-white">
+                    <a href="#">Chi tiết sản phẩm</a>
                 </button>
-                <button class="bg-[#DB4444] rounded w-full p-2 mt-2 text-white" onclick="deleteProduct(${index})">Xóa</button>
+                <button class="bg-[#DB4444] rounded w-1/3 p-2 mt-2 text-white" onclick="deleteProduct(${index})">Xóa</button>
             </div>
         `;
         productList.appendChild(productDiv);
