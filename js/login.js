@@ -18,7 +18,7 @@ formLogin.addEventListener("submit", (e) => {
     if (!findUser) {
         alert("Email hoặc mật khẩu không đúng");
     } else {
-        window.location.href = "../pages/index.html";
+        window.location.href = "../index.html";
 
         // lưu thông tin đăng nhập của user lên local
         localStorage.setItem("userLogin", JSON.stringify(findUser));
