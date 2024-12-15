@@ -2,9 +2,10 @@ const formRegister = document.getElementById("formRegister");
 const userNameElement = document.getElementById("username");
 const emailElement = document.getElementById("email");
 const passwordElement = document.getElementById("password");
-console.log("Hello");
+const roleElement = document.getElementById("role");
 // lấy dữ liệu từ local
 const userLocal = JSON.parse(localStorage.getItem("users")) || [];
+
 formRegister.addEventListener("submit", (e) => {
     e.preventDefault(); // ngăn load lại trang
     // gửi dữ liệu từ form lên localStorage
@@ -13,9 +14,10 @@ formRegister.addEventListener("submit", (e) => {
         const user = {
             username: userNameElement.value,
             email: emailElement.value,
-            password: passwordElement.value
+            password: passwordElement.value,
+            role: roleElement.value || "customer"
         }
-    
+        
         // push user vào mảng userLocal
         userLocal.push(user);
     
@@ -25,6 +27,8 @@ formRegister.addEventListener("submit", (e) => {
         // chuyển hướng về trang đăng nhập
         window.location.href = "./login.html";
     
+    } else {
+        alert("Vui lòng điền đủ thông tin!");
     }
     
 });

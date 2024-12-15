@@ -17,16 +17,6 @@ menuItems.forEach(item => {
     container.appendChild(template);
 })
 
-// lấy dữ liệu trên local
-const userLogin = JSON.parse(localStorage.getItem("userLogin"));
-const userLoginElement = document.getElementById("userLogin");
-
-if (userLogin) {
-  userLoginElement.innerHTML = userLogin.username;
-} else {
-  userLoginElement.innerHTML = "";
-}
-
 function getProduct() {
   return JSON.parse(localStorage.getItem("products")) || [];
 }
@@ -37,7 +27,7 @@ function renderProducts() {
 
   const products = getProduct();
 
-  products.forEach((product) => {
+  products.forEach((product, index) => {
     const productDiv = document.createElement("div");
     productDiv.className = "border p-4 rounded shadow";
 
@@ -46,11 +36,12 @@ function renderProducts() {
         <img src="${product.image}" alt="${product.name}" class="w-full h-60 object-cover mb-4 rounded"/>
       </div>
       <h2 class="text-lg font-bold">${product.name}</h2>
-      <div class="item-price">
-        <span class="text-gray-600">${product.discount}</span>
-        <span class="text-gray-600">${product.price}</span>
+      <div class="flex gap-2">
+        <p class="text-gray-600 line-through font-light">${product.price}.000 VND</p>
+        <p class="text-red-600">${product.discount}%</p>
+        <p class="text-gray-600">${product.finalPrice}.000 VND</p>
       </div>
-      <button class="btn bg-[#DB4444] rounded w-full p-2 mt-2 text-white">Add to my Cart</button>
+      <button onclick="addToCart(${index})" class="btn bg-[#DB4444] rounded w-full p-2 mt-2 text-white">Add to my Cart</button>
     `;
     productList.appendChild(productDiv);
   });

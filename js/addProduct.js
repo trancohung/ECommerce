@@ -1,4 +1,4 @@
-function getProduct() {
+function getProducts() {
     return JSON.parse(localStorage.getItem("products")) || [];
 }
 
@@ -12,7 +12,7 @@ function addProduct(image, name, price, discount) {
     }
 
     const finalPrice = price * (1 - discount /100);
-    const products = getProduct();
+    const products = getProducts();
     products.push({ image, name, price, discount, finalPrice});
     saveProducts(products);
     renderProducts();
@@ -22,7 +22,7 @@ function addProduct(image, name, price, discount) {
 function renderProducts() {
     const productList = document.getElementById("productList");
     productList.innerHTML = "";
-    const products = getProduct();
+    const products = getProducts();
 
     products.forEach((product, index) => {
         const productDiv = document.createElement("div");
@@ -31,8 +31,12 @@ function renderProducts() {
         productDiv.innerHTML = `
             <img src="${product.image}" alt="${product.name}" class="w-full h-60 object-cover mb-4 rounded">
             <h2 class="text-lg font-bold">${product.name}</h2>
-            <p class="text-gray-600">${product.price}.000 VND</p>
-            <p class="text-gray-600">${product.finalPrice}.000 VND</p>
+            <div class="flex gap-2">
+                <p class="text-gray-600 line-through font-light">${product.price}.000 VND</p>
+                <p class="text-red-600">${product.discount}%</p>
+                <p class="text-gray-600">${product.finalPrice}.000 VND</p>
+
+            </div>
             <div class="flex gap-2">
                 <button class="bg-[#DB4444] rounded w-2/3 p-2 mt-2 text-white">
                     <a href="#">Chi tiết sản phẩm</a>
@@ -45,7 +49,7 @@ function renderProducts() {
 }
 
 function deleteProduct(index) {
-    const products = getProduct();
+    const products = getProducts();
     products.splice(index, 1);
     saveProducts(products);
     renderProducts();

@@ -39,10 +39,10 @@
               <a href="#" class="">About</a>
             </li>
             <li class="ct-top-menu-item">
-              <a href="./signup.html" class="">Sign Up</a>
+              <a href="./signup.html" id="signUp" class="">Sign Up / Log In</a>
             </li>
             <li class="ct-top-menu-item">
-              <a href="./addProduct.html" class="">Add Product</a>
+              <a href="./addProduct.html" id="addProductItem" class="">Add Product</a>
             </li>
           </ul>
           <div class="basis-2/6 flex items-center justify-center">
@@ -52,7 +52,7 @@
             </form>
             <div class="flex gap-4">
               <button><i class="fa-regular fa-heart"></i></button>
-              <button><i class="fa-solid fa-cart-shopping"></i></button>
+              <button><a href="./cart.html" id="cartButton"><i id="cart" class="fa-solid fa-cart-shopping"></i></a></button>
               <a id="userLogin"></a>
             </div>
           </div>
@@ -157,6 +157,9 @@
     </div>
   </div>
   <script src="./js/index.js"></script>
+  <script src="./js/auth.js"></script>
+  <script src="./js/cart.js"></script>
+  <script src="./js/addProduct.js"></script>
 </body>
 
 </html>
