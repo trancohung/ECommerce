@@ -1,5 +1,6 @@
+let userLogin = null;
 function checkUserLogin() {
-    const userLogin = JSON.parse(localStorage.getItem("userLogin"));
+    userLogin = JSON.parse(localStorage.getItem("userLogin"));
     const signUp = document.getElementById("signUp");
     const addProductItem = document.getElementById("addProductItem");
     const userLoginElement = document.getElementById("userLogin");

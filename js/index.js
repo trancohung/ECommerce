@@ -32,8 +32,8 @@ function renderProducts() {
     productDiv.className = "border p-4 rounded shadow";
 
     productDiv.innerHTML = `
-      <div class="border rounded">
-        <img src="${product.image}" alt="${product.name}" class="w-full h-60 object-cover mb-4 rounded"/>
+      <div class="border rounded mb-4">
+        <img src="${product.image}" alt="${product.name}" class="w-full h-60 object-cover rounded"/>
       </div>
       <h2 class="text-lg font-bold">${product.name}</h2>
       <div class="flex gap-2">

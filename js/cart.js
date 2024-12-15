@@ -1,4 +1,3 @@
-const userLogin = JSON.parse(localStorage.getItem("userLogin"));
 function getCart() {
     if (!userLogin) return [];
     return JSON.parse(localStorage.getItem(`cart_${userLogin.username}`)) || [];

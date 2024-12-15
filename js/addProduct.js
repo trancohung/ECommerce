@@ -1,3 +1,53 @@
+// const defaultProducts = [
+//     {
+//         image: "./Assets/Frame-604.png",
+//         name: "Breed Dry Dog Food",
+//         price: 100,
+//         discount: 10
+//     },
+//     {
+//         image: "./Assets/Frame-605.png",
+//         name: "CANON EOS DSLR Camera",
+//         price: 360,
+//         discount: 10
+//     },
+//     {
+//         image: "./Assets/Frame-606.png",
+//         name: "ASUS FHD Gaming Laptop",
+//         price: 700,
+//         discount: 10
+//     },
+//     {
+//         image: "./Assets/North-coat.png",
+//         name: "North Coat",
+//         price: 200,
+//         discount: 10
+//     },
+//     {
+//         image: "./Assets/Frame-608.png",
+//         name: "Kds Electric Car",
+//         price: 960,
+//         discount: 10
+//     },
+//     {
+//         image: "./Assets/Frame-609.png",
+//         name: "Jr.Zoom Soccer Cleats",
+//         price: 1.160,
+//         discount: 10
+//     },
+//     {
+//         image: "./Assets/Frame-610.png",
+//         name: "GP11 Shooter USB Gamepad",
+//         price: 660,
+//         discount: 10
+//     },
+//     {
+//         image: "./Assets/Frame-611.png",
+//         name: "Quilted Satin Jacket",
+//         price: 560,
+//         discount: 10
+//     },
+// ]
 function getProducts() {
     return JSON.parse(localStorage.getItem("products")) || [];
 }
